@@ -13,10 +13,9 @@ def scan(input):
         key_word_found = False
         for key in key_words.keys():
             if key == 'number':
-                num = convert_number(word)
-                if num is not None:
+                if convert_number(word) is not None:
                     key_word_found = True
-                    result.append((key, num))
+                    result.append((key, word))
             elif word in key_words[key]:
                 key_word_found = True
                 result.append((key, word))
